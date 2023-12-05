@@ -3,4 +3,9 @@ class HomeController < ApplicationController
     users = User.all
     render json: users
   end
+
+  def countries
+    countries = User.distinct.pluck(:country)
+    render json: countries
+  end
 end

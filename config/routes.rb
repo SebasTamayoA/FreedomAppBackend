@@ -18,5 +18,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  resources :users, only: [:show, :update]
+
   get '/home/index', to: 'home#index'
+  get '/countries', to: 'home#countries'
+
+
 end
